@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dem3qcenv8owc"]
+
+[ext_resource type="PackedScene" uid="uid://cihwfrg6yjcme" path="res://Towel.tscn" id="1_bdar3"]
+[ext_resource type="Script" path="res://GameArea.gd" id="1_ppvuk"]
+[ext_resource type="PackedScene" uid="uid://cryt0idqdqk1u" path="res://Dirt.tscn" id="2_wogrl"]
+
+[node name="GameArea" type="Node2D"]
+script = ExtResource("1_ppvuk")
+
+[node name="Towel" parent="." instance=ExtResource("1_bdar3")]
+position = Vector2(477, 323)
+
+[node name="Dirt" parent="." instance=ExtResource("2_wogrl")]
+visible = false
+z_index = -1
+offset_left = 287.0
+offset_top = 159.0
+offset_right = 287.0
+offset_bottom = 159.0
+mouse_filter = 1

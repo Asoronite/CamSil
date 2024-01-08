@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cryt0idqdqk1u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_loeul"]
+bg_color = Color(0.0901961, 0.607843, 0.764706, 0.764706)
+border_color = Color(0.305882, 0.886275, 0.988235, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u861c"]
+radius = 20.0998
+
+[node name="Dirt" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="DirtArea" type="Area2D" parent="."]
+
+[node name="ColorRect" type="Panel" parent="DirtArea"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_loeul")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DirtArea"]
+shape = SubResource("CircleShape2D_u861c")
+debug_color = Color(0.772549, 0.152941, 1, 0.419608)
